@@ -1,8 +1,7 @@
 import Image from "next/image";
 import { cherry } from "./layout";
 import dialogue from "@/../public/dialogue.png";
-import { revalidatePath } from "next/cache";
-import { redirect } from "next/navigation";
+import styles from "./Styles/HomePage.Modules.css";
 import {
   UserButton,
   SignInButton,
@@ -12,7 +11,7 @@ import {
 } from "@clerk/nextjs";
 export default function HomePage() {
   return (
-    <>
+    <div id="Homepage">
       <Image
         className="inline-block "
         src={dialogue}
@@ -39,6 +38,6 @@ export default function HomePage() {
           </SignUpButton>
         </SignedOut>
       </div>
-    </>
+    </div>
   );
 }

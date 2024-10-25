@@ -21,9 +21,11 @@ export default function RootLayout({ children }) {
   return (
     <ClerkProvider>
       <html lang="en">
-        <body className={`text-xl text-center ${main_font.className} `}>
+        <body className={`m-5 text-xl text-center ${main_font.className} `}>
           <SignedIn>
-            <UserButton />
+            <div className="fixed top-5 right-5">
+              <UserButton />
+            </div>
           </SignedIn>
           {children}
         </body>
