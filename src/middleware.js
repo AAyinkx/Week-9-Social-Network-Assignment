@@ -4,9 +4,12 @@ import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 //we need to write the match in regex
 //You can add as many matches in [] as you want
 
-const isProtectedRoute = createRouteMatcher(["/posts(.*)"]);
+const isProtectedRoute = createRouteMatcher([
+  "/posts(.*)",
+  "/createprofile(.*)",
+]);
 
-export default clerkMiddleware((auth, request) => {
+export default clerkMiddleware(async (auth, request) => {
   if (isProtectedRoute(request)) auth.protect();
 });
 
