@@ -16,7 +16,7 @@ export default async function CreateProfileForm({ clerk_id }) {
       [clerk_id, formData.bio]
     );
 
-    redirect("/posts");
+    redirect("/mainfeed");
   }
   return (
     <div id="form-container">
