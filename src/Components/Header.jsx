@@ -1,11 +1,10 @@
 import { cherry } from "@/app/layout";
 import Navbar from "./Navbar";
+import "./Header.css";
 export default function Header() {
   return (
-    <div className="absolute top-2 ">
-      <div>
-        <h1 className={` text-lg ${cherry.className}`}>YAP!</h1>
-      </div>
+    <div className="header">
+      <h1 className={`yap ${cherry.className}`}>YAP!</h1>
       <Navbar />
     </div>
   );

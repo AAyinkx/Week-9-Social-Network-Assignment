@@ -23,10 +23,10 @@ export default async function CreateProfileForm({ clerk_id }) {
       <form id="the-form" action={handleSubmit}>
         <div className="form-section">
           <div className="title">
-            <label htmlFor="bio">Username</label>
+            <label htmlFor="bio">Write you Bio! ✒️</label>
           </div>
           <div className="input">
-            <input
+            <textarea
               type="text"
               id="bio"
               name="bio"

@@ -1,0 +1,9 @@
+.header {
+  position: absolute;
+  top: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+.yap {
+  color: #fdbd31;
+}

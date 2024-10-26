@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { cherry } from "./layout";
 import dialogue from "@/../public/dialogue.png";
-import styles from "./Styles/HomePage.Modules.css";
+import styles from "./Styles/HomePage.module.css";
 import {
   UserButton,
   SignInButton,
@@ -9,11 +9,11 @@ import {
   SignedIn,
   SignedOut,
 } from "@clerk/nextjs";
-import Header from "@/Components/Header";
-import { Children } from "react";
+
+import Navbar from "@/Components/Navbar";
 export default function HomePage() {
   return (
-    <div id="Homepage">
+    <div className="m-auto">
       <Image
         className="inline-block "
         src={dialogue}
@@ -26,7 +26,7 @@ export default function HomePage() {
       <div className="top-2 right-5">
         <SignedOut>
           <SignInButton
-            className={`${cherry.className} text-3xl px-1 py-2 `}
+            className={`${cherry.className} hover:text-purple-700 text-3xl px-1 py-2 `}
             mode="modal"
           >
             Sign In
@@ -34,13 +34,13 @@ export default function HomePage() {
           <br />
           <SignUpButton
             mode="modal"
-            className={`${cherry.className} text-3xl px-1  py-2`}
+            className={`${cherry.className}  hover:text-purple-700 text-3xl px-1  py-2`}
           >
             Sign Up
           </SignUpButton>
         </SignedOut>
         <SignedIn>
-          <Header />
+          <Navbar />
         </SignedIn>
       </div>
     </div>
