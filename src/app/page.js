@@ -9,6 +9,8 @@ import {
   SignedIn,
   SignedOut,
 } from "@clerk/nextjs";
+import Header from "@/Components/Header";
+import { Children } from "react";
 export default function HomePage() {
   return (
     <div id="Homepage">
@@ -37,6 +39,9 @@ export default function HomePage() {
             Sign Up
           </SignUpButton>
         </SignedOut>
+        <SignedIn>
+          <Header />
+        </SignedIn>
       </div>
     </div>
   );

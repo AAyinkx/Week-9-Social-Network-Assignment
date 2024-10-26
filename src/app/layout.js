@@ -1,3 +1,4 @@
+import Header from "@/Components/Header";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { UserButton, SignedIn } from "@clerk/nextjs";
