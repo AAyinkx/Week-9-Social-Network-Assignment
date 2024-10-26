@@ -1,8 +1,6 @@
 .header {
-  position: absolute;
+  position: fixed;
   top: 2rem;
-  display: flex;
-  flex-direction: column;
 }
 .yap {
   color: #fdbd31;

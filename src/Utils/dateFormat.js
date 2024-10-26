@@ -4,3 +4,8 @@ export function dateISOtoLocal(date) {
 
   return newDate;
 }
+export function timeISOLocal(date) {
+  let time = "";
+  time = `${date.slice(12, 17)}`;
+  return time;
+}

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { cherry } from "./layout";
 import dialogue from "@/../public/dialogue.png";
-import styles from "./Styles/HomePage.module.css";
+
 import {
   UserButton,
   SignInButton,

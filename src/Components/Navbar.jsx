@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <div className={`navbar ${cherry.className}`}>
       <ActiveLink href="/">Homepage</ActiveLink>
-      <ActiveLink href="/posts">Posts</ActiveLink>
+      <ActiveLink href="/mainfeed">Main Feed</ActiveLink>
     </div>
   );
 }
