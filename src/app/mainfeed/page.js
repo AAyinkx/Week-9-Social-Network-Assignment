@@ -20,12 +20,24 @@ export default async function MainFeed() {
     "use server";
     const user = await currentUser();
     const likes = await db.query(`SELECT id FROM likes WHERE post_id=${id};`);
-    console.log(likes[0]);
+
     if (likes.rows[0]) {
       const update = await db.query(
-        `UPDATE likes SET likes = likes + 1 WHERE post_id=$1`,
+        `UPDATE likes SET likes = likes + 1 WHERE post_id=$1 RETURNING *`,
         [id]
       );
+      console.log(update.rows[0]);
+      const instance = await db.query(
+        `SELECT * FROM user_liked_posts WHERE clerk_id=$1 AND likes_id=$2`,
+        [user.id, update.rows[0].id]
+      );
+      console.log(instance.rows[0]);
+      if (!instance.rows[0]) {
+        const usersLikes = await db.query(
+          `INSERT INTO user_liked_posts(clerk_id, likes_id) VALUES ($1,$2)`,
+          [user.id, update.rows[0].id]
+        );
+      }
     } else {
       const insert = await db.query(
         `INSERT INTO likes(post_id, likes) VALUES($1,$2)`,

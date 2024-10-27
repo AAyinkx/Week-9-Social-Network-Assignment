@@ -9,9 +9,10 @@ import DeleteUserButton from "@/Components/DeleteUserButton";
 import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { createClerkClient } from "@clerk/nextjs/server";
+
 export default async function UserProfile() {
   const user = await currentUser();
-  console.log("This is the data ", user);
+  // console.log("This is the data ", user);
 
   const userInfo = await db.query(`SELECT * FROM users WHERE clerk_id=$1;`, [
     user.id,
@@ -55,7 +56,7 @@ export default async function UserProfile() {
           <div className={styles.section}>
             <h1 className={`${styles.header} ${cherry.className}`}>Fullname</h1>
             <p>
-              {user?.firstName} {user?.lastName} <em>null</em>
+              {user?.firstName} {user?.lastName}
             </p>
           </div>
           <div className={styles.section}>
@@ -63,6 +64,13 @@ export default async function UserProfile() {
             <p>{WrangledUserInfo[0].bio}</p>
             <Link className={styles.link} href="/userprofile/editbio">
               Edit Bio
+            </Link>
+          </div>
+          <div className={styles.section}>
+            <h1 className={`${styles.header} ${cherry.className}`}>Likes</h1>
+            <p>See all the posts You&apos;ve Liked </p>
+            <Link className={styles.link} href="/userprofile/likedposts">
+              Liked Posts
             </Link>
           </div>
           <div className={styles.section}>
