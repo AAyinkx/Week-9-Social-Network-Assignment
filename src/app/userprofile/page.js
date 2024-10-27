@@ -11,7 +11,8 @@ import { redirect } from "next/navigation";
 import { createClerkClient } from "@clerk/nextjs/server";
 export default async function UserProfile() {
   const user = await currentUser();
-  console.log("Important data " + JSON.stringify(user.id));
+  console.log("This is the data ", user);
+
   const userInfo = await db.query(`SELECT * FROM users WHERE clerk_id=$1;`, [
     user.id,
   ]);
@@ -54,7 +55,7 @@ export default async function UserProfile() {
           <div className={styles.section}>
             <h1 className={`${styles.header} ${cherry.className}`}>Fullname</h1>
             <p>
-              {user?.firstName} {user?.lastName}
+              {user?.firstName} {user?.lastName} <em>null</em>
             </p>
           </div>
           <div className={styles.section}>

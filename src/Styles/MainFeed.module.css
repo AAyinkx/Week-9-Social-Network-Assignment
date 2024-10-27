@@ -44,6 +44,9 @@
 }
 .postlinkContainer {
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
   right: 0px;
   margin-left: 20px;
 }

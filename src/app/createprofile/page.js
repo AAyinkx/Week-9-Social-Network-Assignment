@@ -9,7 +9,7 @@ export default async function createProfilePage() {
   return (
     <>
       <div>
-        <h1 className={`mb-7 text-5xl ${cherry.className}`}>CREATE PROFILE</h1>
+        <h1 className={`mb-12 text-5xl ${cherry.className}`}>CREATE PROFILE</h1>
         <CreateProfileForm clerk_id={user.id} />
       </div>
     </>
