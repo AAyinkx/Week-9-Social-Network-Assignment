@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
     <ClerkProvider>
       <html lang="en">
         <body
-          className={`m-5 text-xl flex text-center place-content-center items-center ${main_font.className} `}
+          className={`m-5 text-xl flex text-center place-content-center  ${main_font.className} `}
         >
           <Script
             src="https://kit.fontawesome.com/5d4d1c054f.js"

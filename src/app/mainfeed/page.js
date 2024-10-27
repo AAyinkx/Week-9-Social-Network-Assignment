@@ -5,7 +5,7 @@ import { db } from "@/Utils/dbConnection";
 import { dateISOtoLocal, timeISOLocal } from "@/Utils/dateFormat";
 import styles from "@/Styles/MainFeed.module.css";
 import { createClerkClient } from "@clerk/nextjs/server";
-
+import Link from "next/link";
 import { cherry } from "../layout";
 export default async function MainFeed() {
   async function GetUsername(userId) {
@@ -26,8 +26,10 @@ export default async function MainFeed() {
   return (
     <>
       <Header />
-      <div>
-        <h1 className={`mb-7 text-5xl text-yellow-500 ${cherry.className}`}>
+      <div className="absolute">
+        <h1
+          className={`relative mt-12 mb-7 text-5xl text-yellow-500 ${cherry.className}`}
+        >
           Main Feed
         </h1>
         <div className={styles.postsContainer}>

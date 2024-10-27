@@ -27,20 +27,24 @@
 }
 
 .link {
-  margin-bottom: 150px;
-  font-size: 25px;
-  background-color: #6d071a;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 25px;
+  font-size: 20px;
+  background-color: var(--purple-purple);
   color: white;
-  padding: 0px 20px;
+  padding: 10px 20px;
   border-radius: 15px;
+  max-width: 20vw;
 }
 .link:hover {
-  color: #6d071a;
+  color: var(--purple-purple);
   background-color: white;
   padding: 0px 20px;
   border-radius: 15px;
 }
 .commentContainer {
+  position: relative;
   margin-top: 30px;
   display: inline-block;
   margin-bottom: 15px;
@@ -65,9 +69,6 @@
 }
 
 @media ((width<=750px)) {
-  .bookReview {
-    font-size: 23px;
-  }
   .commentUsername {
     font-size: 18px;
   }
@@ -76,7 +77,4 @@
   }
 }
 @media ((width<=580px)) {
-  .bookReview {
-    font-size: 20px;
-  }
 }

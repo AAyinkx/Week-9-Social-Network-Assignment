@@ -13,7 +13,7 @@ import {
 import Navbar from "@/Components/Navbar";
 export default function HomePage() {
   return (
-    <div className="m-auto">
+    <div>
       <Image
         className="inline-block "
         src={dialogue}

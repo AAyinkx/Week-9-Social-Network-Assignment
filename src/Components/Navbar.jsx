@@ -15,6 +15,7 @@ export default function Navbar() {
       <div className={`navbar ${cherry.className}`}>
         <ActiveLink href="/">Homepage</ActiveLink>
         <ActiveLink href="/mainfeed">Main Feed</ActiveLink>
+        <ActiveLink href="/userprofile">User Profile</ActiveLink>
       </div>
       <div className="dropdown">
         <i className="fa fa-bars" id="dropbtn" onClick={dropFunction}></i>
@@ -26,6 +27,7 @@ export default function Navbar() {
         >
           <ActiveLink href="/">Homepage</ActiveLink>
           <ActiveLink href="/mainfeed">Main Feed</ActiveLink>
+          <ActiveLink href="/userprofile">User Profile</ActiveLink>
         </div>
       </div>
     </>

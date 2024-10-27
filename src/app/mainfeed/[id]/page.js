@@ -6,6 +6,7 @@ import CommentForm from "@/Components/CommentForm";
 import styles from "@/Styles/IndividualPost.module.css";
 import { cherry } from "@/app/layout";
 import DeleteButton from "@/Components/DeleteButton";
+import Link from "next/link";
 export default async function IndividualPost({ params }) {
   async function GetUsername(userId) {
     //Creates clerk client
@@ -28,9 +29,9 @@ export default async function IndividualPost({ params }) {
   return (
     <>
       <Header />
-      <div>
+      <div className="absolute">
         <h1
-          className={`relative mt-10 text-5xl text-purple-500 ${cherry.className}`}
+          className={`relative mt-12 text-5xl text-purple-500 ${cherry.className}`}
         >
           Post Thread
         </h1>
@@ -59,6 +60,10 @@ export default async function IndividualPost({ params }) {
               <DeleteButton postId={postparams.id} commentId={comment.id} />
             </div>
           ))}
+        </div>
+        <br />
+        <div className={` ${cherry.className} ${styles.link}`}>
+          <Link href={`/mainfeed`}> Main Feed</Link>
         </div>
       </div>
     </>
