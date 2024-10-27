@@ -1,0 +1,82 @@
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+.postContainer {
+  position: relative;
+  background-color: white;
+  width: 60vw;
+  display: inline-block;
+  /* left: 50vw;
+  transform: translateX(-50%); */
+  padding-top: 20px;
+  padding-bottom: 40px;
+  border-radius: 10px;
+}
+.username {
+  font-size: 20px;
+  font-weight: 700;
+}
+.time {
+  font-size: 16px;
+  font-weight: 600;
+  color: #5b2c6f;
+  padding: 0px;
+}
+.date {
+  font-size: 18px;
+  font-style: italic;
+  color: #6d3d81;
+}
+
+.link {
+  margin-bottom: 150px;
+  font-size: 25px;
+  background-color: #6d071a;
+  color: white;
+  padding: 0px 20px;
+  border-radius: 15px;
+}
+.link:hover {
+  color: #6d071a;
+  background-color: white;
+  padding: 0px 20px;
+  border-radius: 15px;
+}
+.commentContainer {
+  margin-top: 30px;
+  display: inline-block;
+  margin-bottom: 15px;
+  background-color: rgba(234, 120, 242, 0.481);
+  height: 150px;
+  width: 60vw;
+  overflow: scroll;
+  overflow-x: hidden;
+  border-radius: 10px;
+}
+.commentUsername {
+  font-size: 20px;
+  color: black;
+  font-weight: 600;
+}
+.comment {
+  font-size: 18px;
+  color: black;
+  margin-bottom: 10px;
+}
+@media ((width<=925px)) {
+}
+
+@media ((width<=750px)) {
+  .bookReview {
+    font-size: 23px;
+  }
+  .commentUsername {
+    font-size: 18px;
+  }
+  .comment {
+    font-size: 24px;
+  }
+}
+@media ((width<=580px)) {
+  .bookReview {
+    font-size: 20px;
+  }
+}

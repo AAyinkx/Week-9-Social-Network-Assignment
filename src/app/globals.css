@@ -7,6 +7,10 @@
   --foreground-light: #171717;
   --background-dark: #171717;
   --foreground-dark: #ffffff;
+  --purple-purple: purple;
+  --purple-hover: #cb80ff;
+  --yellow-yellow: #ffd700;
+  --yellow-hover: #e9aa2b;
 }
 /* .light {
 }

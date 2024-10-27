@@ -13,7 +13,7 @@ const main_font = Kodchasan({
   subsets: ["latin"],
   weight: "400",
 });
-export const metadata = {
+const metadata = {
   title: "YAP!",
   description: "Your voice, your vibe, your platform!",
 };
@@ -23,13 +23,12 @@ export default function RootLayout({ children }) {
     <ClerkProvider>
       <html lang="en">
         <body
-          className={`m-5 text-xl flex h-[90vh] text-center place-content-center items-center ${main_font.className} `}
+          className={`m-5 text-xl flex text-center place-content-center items-center ${main_font.className} `}
         >
-          {/* <Script
+          <Script
             src="https://kit.fontawesome.com/5d4d1c054f.js"
             crossOrigin="anonymous"
-            strategy="beforeInteractive"
-          ></Script> */}
+          ></Script>
           <SignedIn>
             <div className="z-10 fixed top-5 right-5">
               <UserButton />

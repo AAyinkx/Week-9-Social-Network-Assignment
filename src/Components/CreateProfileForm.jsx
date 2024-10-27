@@ -37,7 +37,7 @@ export default async function CreateProfileForm({ clerk_id }) {
         </div>
         <div className="form-section" id="submit">
           <button id="submit-button" type="submit">
-            SUBMIT
+            CREATE YOUR PROFILE!
           </button>
         </div>
       </form>
