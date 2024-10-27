@@ -19,7 +19,7 @@
 } */
 
 body {
-  color: var(--foreground-light);
-  background: var(--background-light);
+  color: var(--foreground-dark);
+  background: var(--background-dark);
   overflow-x: hidden;
 }

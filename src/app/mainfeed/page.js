@@ -7,17 +7,8 @@ import styles from "@/Styles/MainFeed.module.css";
 import { createClerkClient } from "@clerk/nextjs/server";
 import Link from "next/link";
 import { cherry } from "../layout";
+
 export default async function MainFeed() {
-  async function GetUsername(userId) {
-    //Creates clerk client
-    const clerkClient = createClerkClient({
-      secretKey: process.env.CLERK_SECRET_KEY,
-    });
-
-    const user = await clerkClient.users.getUser(userId);
-    return user.username;
-  }
-
   const posts = await db.query(`SELECT * FROM posts ORDER BY posted_at;`);
   const WrangledPosts = posts.rows;
   let response;
@@ -37,9 +28,6 @@ export default async function MainFeed() {
             <>
               <div key={post.id} className={styles.postbox}>
                 <div className={styles.post}>
-                  <div className={styles.username}>
-                    {GetUsername(post.clerk_id)}
-                  </div>
                   <div className={styles.time}>
                     {timeISOLocal(JSON.stringify(post.posted_at))}
                   </div>

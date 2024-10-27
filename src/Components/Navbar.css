@@ -3,6 +3,7 @@
   color: var(--purple-purple);
 }
 .navbar {
+  color: var(--purple-hover);
   height: 50px;
   background-color: transparent;
   top: 0;
@@ -20,7 +21,7 @@
   font-weight: 500;
 }
 .navbar a:hover {
-  color: var(--purple-hover);
+  color: var(--yellow-hover);
 }
 
 /*dropdown menu*/

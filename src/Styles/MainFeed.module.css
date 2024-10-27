@@ -1,5 +1,6 @@
 @import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
 .postsContainer {
+  color: black;
   position: relative;
   width: 70vw;
   height: 60vh;
@@ -13,8 +14,6 @@
   background-color: white;
   box-shadow: 0px 0px 20px 20px var(--yellow-yellow);
   text-align: left;
-
-  z-index: 0;
 }
 
 .post {

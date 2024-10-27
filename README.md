@@ -15,6 +15,8 @@
 - [Clerk Environment Variables and Redirects](https://clerk.com/docs/deployments/clerk-environment-variables#sign-in-and-sign-up-redirects)
 - [User Object](https://clerk.com/docs/references/javascript/user/user)
 - [getUser & getUserList with clerkClient](https://clerk.com/docs/references/backend/overview)
+- [Deleting User with deleteUser()](https://clerk.com/docs/references/backend/user/delete-user)
+- [Create Custoom SignOut Flow](https://clerk.com/docs/custom-flows/sign-out)
 
 ## Reflection
 

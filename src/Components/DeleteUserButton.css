@@ -1,0 +1,38 @@
+#form {
+  padding: 0px;
+}
+#delete-container {
+  position: relative;
+}
+.deleteButton {
+  border: none;
+  outline: none;
+  background-color: red;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  margin: 20px 15px;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.deleteButton:hover {
+  background-color: white;
+  color: red;
+}
+.green {
+  color: #4caf50;
+}
+#scale {
+  scale: 1;
+}
+@media ((width<=580px)) {
+  #thumb-button {
+    font-size: 20px;
+  }
+}
+@media ((width<=450px)) {
+  #thumb-button {
+    font-size: 15px;
+  }
+}

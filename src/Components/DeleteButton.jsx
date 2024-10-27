@@ -2,7 +2,7 @@ import "./DeleteButton.css";
 import { db } from "@/Utils/dbConnection";
 import { revalidatePath } from "next/cache";
 export default function DeleteButton({ commentId, postId }) {
-  async function handleDelete(formValues) {
+  async function handleDelete() {
     "use server";
 
     await db.query(

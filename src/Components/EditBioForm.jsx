@@ -1,44 +1,50 @@
 import { db } from "@/Utils/dbConnection";
-import "./CreateProfileForm.css";
+import "./EditBioForm.css";
 import { revalidatePath } from "next/cache";
 //make sure redirect is from next/navigation
 import { redirect } from "next/navigation";
-export default async function CreateProfileForm({ clerk_id }) {
+export default async function EditBioForm({ clerk_id }) {
+  const currentBio = await db.query(`SELECT * FROM users WHERE clerk_id=$1`, [
+    clerk_id,
+  ]);
+  const WrangledCurrentBio = currentBio.rows;
   async function handleSubmit(formValues) {
     "use server";
     const formData = {
       bio: formValues.get("bio"),
     };
     await db.query(
-      `INSERT INTO users (clerk_id, bio)
-          VALUES ($1, $2);
+      `UPDATE users SET bio=$1 WHERE clerk_id=$2;
           `,
-      [clerk_id, formData.bio]
+      [formData.bio, clerk_id]
     );
 
-    revalidatePath("/mainfeed");
-    redirect("/mainfeed");
+    revalidatePath("/userprofile");
+    redirect("/userprofile");
   }
   return (
     <div id="form-container">
       <form id="the-form" action={handleSubmit}>
         <div className="form-section">
           <div className="title">
-            <label htmlFor="bio">Write you Bio! ✒️</label>
+            <label htmlFor="bio">
+              Write your <em>New</em> Bio! ✒️
+            </label>
           </div>
           <div className="input">
             <textarea
               type="text"
               id="bio"
               name="bio"
-              placeholder="Please write a bio for your account"
+              placeholder="Please write a new bio for your account"
+              defaultValue={WrangledCurrentBio[0].bio}
               required
             />
           </div>
         </div>
         <div className="form-section" id="submit">
           <button id="submit-button" type="submit">
-            CREATE YOUR PROFILE!
+            UPDATE YOUR BIO!
           </button>
         </div>
       </form>

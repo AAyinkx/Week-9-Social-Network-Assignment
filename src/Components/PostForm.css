@@ -8,15 +8,14 @@
   border-radius: 10px;
   background-color: white;
   box-shadow: 0px 0px 20px 20px #ffc7ff;
-  /* in order: x offset, y offset, blur size, spread size, color */
+  width: 60vw;
+  height: 45vh;
+  margin-top: 20px;
+  margin-bottom: 10px;
 
-  width: 800px;
-  height: 50vh;
-  margin-bottom: 20px;
-  overflow: scroll;
-  overflow: hidden;
-  left: 50%;
-  transform: translateX(-50%);
+  overflow-x: hidden;
+  /* left: 50%;
+  transform: translateX(-50%); */
 }
 
 .form-section {
@@ -26,9 +25,13 @@
   text-align: center;
   font-size: large;
 }
+.title {
+  color: white;
+  font-size: 30px;
+}
 
 #submit-button {
-  background-color: #cb80ff;
+  background-color: var(--purple-purple);
   color: white;
   padding: 6px 10px;
   border: none;
@@ -37,6 +40,9 @@
   font-size: 20px;
 }
 
+#post {
+  height: 30vh;
+}
 input[type="text"],
 textarea {
   width: 100%;
@@ -47,15 +53,13 @@ textarea {
   resize: vertical;
   /* overflow-y: scroll; */
 }
-input[type="text"]::placeholder {
+input[type="text"]::placeholder,
+textarea ::placeholder {
   font-size: 18px;
-}
-textarea {
-  height: 30vh;
 }
 
 #submit-button:hover {
-  background-color: #a364ff;
+  background-color: var(--purple-hover);
 }
 
 @media ((width<=825px)) {

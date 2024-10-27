@@ -4,7 +4,13 @@ import Link from "next/link";
 import { cherry } from "@/app/layout";
 import { useState } from "react";
 import "./Navbar.css";
-export default function Navbar() {
+export default function Navbar({ params }) {
+  async function Params() {
+    const postparams = await params;
+    return postparams;
+  }
+  const postparams = Params();
+
   const [dropdownClass, setDropdownClass] = useState("false");
 
   function dropFunction() {
@@ -16,6 +22,7 @@ export default function Navbar() {
         <ActiveLink href="/">Homepage</ActiveLink>
         <ActiveLink href="/mainfeed">Main Feed</ActiveLink>
         <ActiveLink href="/userprofile">User Profile</ActiveLink>
+        <ActiveLink href="/addposts">Add Post</ActiveLink>
       </div>
       <div className="dropdown">
         <i className="fa fa-bars" id="dropbtn" onClick={dropFunction}></i>
@@ -28,6 +35,7 @@ export default function Navbar() {
           <ActiveLink href="/">Homepage</ActiveLink>
           <ActiveLink href="/mainfeed">Main Feed</ActiveLink>
           <ActiveLink href="/userprofile">User Profile</ActiveLink>
+          <ActiveLink href="/addposts">Add Post</ActiveLink>
         </div>
       </div>
     </>

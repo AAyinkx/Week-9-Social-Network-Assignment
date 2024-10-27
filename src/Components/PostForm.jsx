@@ -1,44 +1,51 @@
 import { db } from "@/Utils/dbConnection";
-import "./CreateProfileForm.css";
+import "./PostForm.css";
 import { revalidatePath } from "next/cache";
 //make sure redirect is from next/navigation
 import { redirect } from "next/navigation";
-export default async function CreateProfileForm({ clerk_id }) {
+
+export default async function PostForm(props) {
   async function handleSubmit(formValues) {
     "use server";
+
     const formData = {
-      bio: formValues.get("bio"),
+      post: formValues.get("post"),
     };
+
+    // console.log(formData);
     await db.query(
-      `INSERT INTO users (clerk_id, bio)
+      `INSERT INTO posts (clerk_id, post)
           VALUES ($1, $2);
           `,
-      [clerk_id, formData.bio]
+      [props.id, formData.post]
     );
 
-    revalidatePath("/mainfeed");
-    redirect("/mainfeed");
+    //Refreshing the data on the reviews page
+
+    revalidatePath(`/mainfeed`);
+    redirect(`/mainfeed`);
   }
+
   return (
     <div id="form-container">
       <form id="the-form" action={handleSubmit}>
         <div className="form-section">
           <div className="title">
-            <label htmlFor="bio">Write you Bio! ✒️</label>
+            <label htmlFor="post">Add your post</label>
           </div>
           <div className="input">
             <textarea
-              type="text"
-              id="bio"
-              name="bio"
-              placeholder="Please write a bio for your account"
+              id="post"
+              name="post"
+              placeholder="Add your post"
               required
-            />
+            ></textarea>
           </div>
         </div>
+
         <div className="form-section" id="submit">
           <button id="submit-button" type="submit">
-            CREATE YOUR PROFILE!
+            SUBMIT
           </button>
         </div>
       </form>

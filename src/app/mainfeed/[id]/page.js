@@ -8,11 +8,11 @@ import { cherry } from "@/app/layout";
 import DeleteButton from "@/Components/DeleteButton";
 import Link from "next/link";
 export default async function IndividualPost({ params }) {
+  const clerkClient = createClerkClient({
+    secretKey: process.env.CLERK_SECRET_KEY,
+  });
   async function GetUsername(userId) {
     //Creates clerk client
-    const clerkClient = createClerkClient({
-      secretKey: process.env.CLERK_SECRET_KEY,
-    });
 
     const user = await clerkClient.users.getUser(userId);
     return user.username;
@@ -31,7 +31,7 @@ export default async function IndividualPost({ params }) {
       <Header />
       <div className="absolute">
         <h1
-          className={`relative mt-12 text-5xl text-purple-500 ${cherry.className}`}
+          className={`relative mt-12 mb-10 text-5xl text-purple-500 ${cherry.className}`}
         >
           Post Thread
         </h1>
