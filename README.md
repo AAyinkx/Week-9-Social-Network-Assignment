@@ -27,9 +27,10 @@
 - Overall I am glad i got to practice my use of the docs 😅 just a bit frustrated that it made progress so slow
 - I would have liked to play around more with the error pages and loading page, but that could be something i could maybe add to this project later
 
+
 ## What bugs did I encounter? 🪲
 
 - I feel like i encountered every bug that I was able to encounter this week 😔
-- I had a lot of issues with my laptop due to some slow updates so it kept crashing unfortunately. However i managed to get it workingunday afternoon so i was able to get most of the stuff done
-- The clerk docs were really useful this week even though i was referencing them every 5
-- I did have a problem with the metadata where it said i couldn't export the main meta data on layout to a client page? I don't know if this is a next 15 thinng though because the metadata seemed to work okay last week
+- I had a lot of issues with my laptop due to some slow updates so it kept crashing unfortunately. However i managed to get it working on Sunday afternoon so i was able to get most of the stuff done
+- The clerk docs were really useful this week even though i was referencing them every 5 minutes
+- I did have a problem with the metadata where it said i couldn't export the main meta data on layout to a client page? I don't know if this is a next15 thing though because the metadata seemed to work okay last week
