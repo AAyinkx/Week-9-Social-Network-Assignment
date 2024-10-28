@@ -70,7 +70,7 @@ export default async function UserProfile() {
             <h1 className={`${styles.header} ${cherry.className}`}>Likes</h1>
             <p>See all the posts You&apos;ve Liked </p>
             <Link className={styles.link} href="/userprofile/likedposts">
-              Liked Posts
+              Posts
             </Link>
           </div>
           <div className={styles.section}>
