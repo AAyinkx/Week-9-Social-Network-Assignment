@@ -4,6 +4,7 @@ import Link from "next/link";
 import { cherry } from "@/app/layout";
 import { useState } from "react";
 import "./Navbar.css";
+
 export default function Navbar({ params }) {
   async function Params() {
     const postparams = await params;
