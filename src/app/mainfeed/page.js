@@ -90,7 +90,7 @@ export default async function MainFeed() {
                 </div>
 
                 <div className={styles.postlinkContainer}>
-                  <div>
+                  <div className="relative">
                     <a
                       className={` ${styles.postlink}`}
                       href={`/mainfeed/${post.id}`}
@@ -98,7 +98,7 @@ export default async function MainFeed() {
                       <i className={`fa-regular fa-comments`}></i>
                     </a>
                   </div>
-                  <div>
+                  <div className="relative">
                     <ThumbButton
                       id={post.id}
                       handleClicks={handleClicks}
