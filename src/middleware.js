@@ -5,8 +5,10 @@ import { clerkMiddleware, createRouteMatcher } from "@clerk/nextjs/server";
 //You can add as many matches in [] as you want
 
 const isProtectedRoute = createRouteMatcher([
-  "/posts(.*)",
+  "/mainfeed(.*)",
   "/createprofile(.*)",
+  "/addposts(.*)",
+  "/userprofile(.*)",
 ]);
 
 export default clerkMiddleware(async (auth, request) => {

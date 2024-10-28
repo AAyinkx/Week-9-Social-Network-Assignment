@@ -25,6 +25,7 @@
 - I am pleased that i was able to get most of the main requirements done this week despite some issues i had with my laptop
 - I didn't manahge to compolete the part with the Radix component because i had some compatiblity issues with next 15 so i just left that and focussed on some other parts of the program
 - Overall I am glad i got to practice my use of the docs 😅 just a bit frustrated that it made progress so slow
+- I would have liked to play around more with the error pages and loading page, but that could be something i could maybe add to this project later
 
 ## What bugs did I encounter? 🪲
 
