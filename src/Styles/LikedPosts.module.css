@@ -20,7 +20,7 @@
   position: relative;
   display: flex;
   flex-direction: column;
-  padding: 5px;
+  padding: 10px;
   max-width: 55vw;
 }
 .postbox {
@@ -33,8 +33,9 @@
   border-bottom: solid rgba(0, 0, 0, 0.26) 1px;
 }
 .postlink {
+  position: relative;
   padding: 8px 12px;
-
+  font-size: 15px;
   border-radius: 5px;
   color: white;
   background-color: var(--purple-purple);
@@ -43,12 +44,12 @@
   background-color: var(--purple-hover);
 }
 .postlinkContainer {
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-items: center;
-  right: 0px;
-  margin-left: 20px;
+  right: 5px;
+  margin: 5px;
 }
 .username {
   font-size: 20px;
@@ -100,4 +101,18 @@
   background-color: white;
   padding: 10px 20px;
   border-radius: 15px;
+}
+@media ((width<=580px)) {
+  .post {
+    font-size: 18px;
+  }
+  .username {
+    font-size: 16px;
+  }
+  .time {
+    font-size: 12px;
+  }
+  .date {
+    font-size: 14px;
+  }
 }
