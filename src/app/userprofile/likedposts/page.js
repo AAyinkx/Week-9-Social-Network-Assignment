@@ -51,10 +51,10 @@ export default async function LikedPosts() {
           ))}
         </div>
         <br />
-        <div className={` ${cherry.className} ${styles.link}`}>
+        <div className={`  ${styles.link}`}>
           <Link href={`/mainfeed`}> Main Feed</Link>
         </div>
-        <div className={` ${cherry.className} ${styles.link2}`}>
+        <div className={`  ${styles.link2}`}>
           <Link href={`/userprofile`}> User Profile</Link>
         </div>
       </div>

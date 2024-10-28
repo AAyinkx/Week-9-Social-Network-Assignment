@@ -2,6 +2,7 @@ import Header from "@/Components/Header";
 import "./globals.css";
 import { ClerkProvider } from "@clerk/nextjs";
 import { UserButton, SignedIn } from "@clerk/nextjs";
+import { dark, neobrutalism } from "@clerk/themes";
 import { Cherry_Bomb_One, Kodchasan } from "next/font/google";
 import Script from "next/script";
 export const cherry = Cherry_Bomb_One({
@@ -20,7 +21,21 @@ const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <ClerkProvider>
+    <ClerkProvider
+      appearance={{
+        layout: {
+          socialButtonsVariant: "iconButton",
+        },
+        baseTheme: [neobrutalism, dark],
+        variables: {
+          colorPrimary: "#cb80ff",
+          colorInputText: "#ffffff",
+          colorText: "#ffffff",
+          colorNeutral: "#ffffff",
+          colorTextOnPrimaryBackground: "#ffffff",
+        },
+      }}
+    >
       <html lang="en">
         <body
           className={`m-5 text-xl flex text-center place-content-center  ${main_font.className} `}
