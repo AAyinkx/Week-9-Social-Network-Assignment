@@ -45,7 +45,7 @@ export default async function CommentForm(props) {
 
         <div className="form-section">
           <div className="title">
-            <label htmlFor="comment">Your Review of the book</label>
+            <label htmlFor="comment">Your Yap!</label>
           </div>
           <div className="input">
             <textarea
