@@ -26,8 +26,8 @@
 - I didn't manahge to compolete the part with the Radix component because i had some compatiblity issues with next 15 so i just left that and focussed on some other parts of the program
 - Overall I am glad i got to practice my use of the docs 😅 just a bit frustrated that it made progress so slow
 - I would have liked to play around more with the error pages and loading page, but that could be something i could maybe add to this project later
-- One question I had was whether or not the children folders are also protected if you list the parent in the middleware. I wasn't entirely sure so I've only listed the parent folders in the middleware 
-
+- One question I had was whether or not the children folders are also protected if you list the parent in the middleware. I wasn't entirely sure so I've only listed the parent folders in the middleware
+- Also, should middleware go in the .gitignore or does it not really matter even if it is a public repo?
 
 ## What bugs did I encounter? 🪲
 
